@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCss && Js Responsive Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="w-full h-24 shadow-md flex justify-between items-center px-4 flex-wrap">
+        <div id="logo" class="h-full w-20 sm:w-1/12 flex justify-center items-center">
+            <ion-icon name="aperture-outline" class="w-20 h-20"></ion-icon>
+        </div>
+        <div id="desktopMenu" class="w-1/2 h-full sm:flex sm:justify-between sm:items-center hidden">
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">Home</a>
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">Blog</a>
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">Post</a>
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">Videos</a>
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">Contact</a>
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">About</a>
+        </div>
+        <span id="mobileMenuBtn" class="sm:hidden w-20 h-full flex justify-center items-center">
+            <ion-icon name="menu-outline" class="w-10 h-10"></ion-icon>
+        </span>
+        <div id="mobileMenu" class="w-full h-auto shadow-md flex hidden flex-col justify-center items-center py-2 gap-y-2">
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">Home</a>
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">Blog</a>
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">Post</a>
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">Videos</a>
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">Contact</a>
+            <a class="text-xl font-bold transition-all duration-200 hover:scale-125" href="#">About</a>
+        </div>
+    </nav>
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        const mobileMenuBtn = document.querySelector("#mobileMenuBtn");
+        const mobileMenu = document.querySelector("#mobileMenu");
+        mobileMenuBtn.addEventListener('click', function(){
+            mobileMenu.classList.toggle('hidden');
+        })
+    })
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
